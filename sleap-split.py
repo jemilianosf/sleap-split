@@ -102,8 +102,10 @@ def split_videos(predictions_file, video_file, pad = 200):
 video_input = sys.argv[1]
 input_pad = sys.argv[2]
 
-model1="~/sleap-split/models/230115_170427.centered_instance"
-model2="~/sleap-split/models/230115_170427.centroid"
+script_directory = os.path.dirname(os.path.abspath(sys.argv[0]))
+
+model1=script_directory+"/models/230115_170427.centered_instance"
+model2=script_directory+"/models/230115_170427.centroid"
 
 ## Mov to MP4
 video_input_split = os.path.splitext(video_input)
